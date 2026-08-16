@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Jellyfin Downloader</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111827;
+            color: #f9fafb;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 12px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1px solid #374151;
+            background: #1f2937;
+            color: white;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 18px;
+            border: 0;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .add {
+            background: #22c55e;
+            color: white;
+        }
+
+        .card {
+            background: #1f2937;
+            padding: 18px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        .name {
+            font-weight: bold;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background: #374151;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: #22c55e;
+        }
+
+        .info {
+            margin-top: 8px;
+            color: #d1d5db;
+            font-size: 14px;
+        }
+
+        .error {
+            color: #f87171;
+            margin-top: 10px;
+        }
+
+        .success {
+            color: #4ade80;
+            margin-top: 10px;
+        }
+
+        .empty {
+            color: #9ca3af;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Jellyfin Downloader</h1>
+
+    <textarea
+        id="magnet"
+        placeholder="Paste magnet link here..."></textarea>
+
+    <br>
+
+    <button class="add" onclick="addDownload()">
+        Add Download
+    </button>
+
+    <div id="message"></div>
+
+    <h2>Downloads</h2>
+
+    <div id="downloads">
+        <div class="empty">
+            Loading...
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+function formatBytes(bytes) {
+    if (!bytes) return "0 B";
+
+    const units = [
+        "B",
+        "KB",
+        "MB",
+        "GB",
+        "TB"
+    ];
+
+    let i = 0;
+
+    while (bytes >= 1024 && i < units.length - 1) {
+        bytes /= 1024;
+        i++;
+    }
+
+    return bytes.toFixed(1) + " " + units[i];
+}
+
+
+function formatSpeed(bytes) {
+    return formatBytes(bytes) + "/s";
+}
+
+
+async function addDownload() {
+
+    const magnet =
+        document.getElementById("magnet").value.trim();
+
+    const message =
+        document.getElementById("message");
+
+    if (!magnet) {
+        message.innerHTML =
+            '<div class="error">Paste a magnet link first.</div>';
+        return;
+    }
+
+    message.innerHTML =
+        '<div>Adding download...</div>';
+
+    try {
+
+        const response = await fetch(
+            "/api/add",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    magnet: magnet
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(
+                data.error || "Failed to add download"
+            );
+        }
+
+        message.innerHTML =
+            '<div class="success">Download added: ' +
+            data.gid +
+            '</div>';
+
+        document.getElementById("magnet").value = "";
+
+        loadDownloads();
+
+    } catch (error) {
+
+        message.innerHTML =
+            '<div class="error">' +
+            error.message +
+            '</div>';
+    }
+}
+
+
+async function organize(gid) {
+
+    try {
+
+        const response = await fetch(
+            "/api/organize/" + gid,
+            {
+                method: "POST"
+            }
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+            loadDownloads();
+        }
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+async function loadDownloads() {
+
+    try {
+
+        const response =
+            await fetch("/api/status");
+
+        const data =
+            await response.json();
+
+        if (data.error) {
+            throw new Error(data.error);
+        }
+
+        const container =
+            document.getElementById("downloads");
+
+        if (!data.downloads.length) {
+
+            container.innerHTML =
+                '<div class="empty">' +
+                'No downloads' +
+                '</div>';
+
+            return;
+        }
+
+        container.innerHTML = "";
+
+        for (const item of data.downloads) {
+
+            const card =
+                document.createElement("div");
+
+            card.className = "card";
+
+            let action = "";
+
+            if (item.status === "complete") {
+                action +=
+                    '<button onclick="organize(\'' +
+                    item.gid +
+                    '\')">' +
+                    'Organize into Jellyfin' +
+                    '</button>';
+            }
+
+            action +=
+                '<button class="remove" onclick="removeDownload(\'' +
+                item.gid +
+                '\')">' +
+                'Delete download' +
+                '</button>';
+
+            card.innerHTML = `
+                <div class="name">
+                    ${escapeHtml(item.name || item.gid)}
+                </div>
+
+                <div class="bar">
+                    <div class="progress"
+                         style="width:${item.progress}%">
+                    </div>
+                </div>
+
+                <div class="info">
+                    ${item.progress}% ·
+                    ${formatBytes(item.completed)}
+                    /
+                    ${formatBytes(item.total)}
+                    ·
+                    ${formatSpeed(item.downloadSpeed)}
+                    ·
+                    ${item.status}
+                    ·
+                    ${item.connections} connections
+                </div>
+
+                ${action}
+            `;
+
+            container.appendChild(card);
+        }
+
+    } catch (error) {
+
+        document.getElementById("downloads").innerHTML =
+            '<div class="error">' +
+            error.message +
+            '</div>';
+    }
+}
+
+
+async function removeDownload(gid) {
+    if (!confirm("Delete this torrent and its downloaded files?")) {
+        return;
+    }
+
+    const response = await fetch("/api/remove/" + gid, {
+        method: "POST"
+    });
+    const data = await response.json();
+
+    if (!response.ok || data.error) {
+        alert(data.error || "Unable to delete download");
+        return;
+    }
+
+    loadStatus();
+}
+
+
+function escapeHtml(value) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = value;
+
+    return div.innerHTML;
+}
+
+
+loadDownloads();
+
+setInterval(
+    loadDownloads,
+    3000
+);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+#!/usr/bin/env python3
+
+import os
+import json
+import time
+import shutil
+import urllib.request
+import urllib.error
+import re
+
+BASE = "/opt/jellyfin-downloader"
+QUEUE = f"{BASE}/queue/completed"
+LOG = f"{BASE}/organizer.log"
+
+ARIA2_URL = "http://127.0.0.1:6800/jsonrpc"
+
+JELLYFIN_URL = os.environ.get(
+    "JELLYFIN_URL",
+    "http://127.0.0.1:8096"
+)
+
+JELLYFIN_API_KEY = os.environ.get(
+    "JELLYFIN_API_KEY",
+    ""
+)
+
+ARIA2_SECRET = os.environ.get(
+    "ARIA2_SECRET",
+    ""
+)
+
+MOVIES = "/mnt/media/movies"
+TV = "/mnt/media/tv"
+
+VIDEO_EXTENSIONS = (
+    ".mp4",
+    ".mkv",
+    ".avi",
+    ".mov",
+    ".m4v",
+    ".webm",
+    ".wmv",
+    ".ts",
+)
+
+
+def log(message):
+    with open(LOG, "a") as f:
+        f.write(
+            time.strftime("%Y-%m-%d %H:%M:%S")
+            + " "
+            + message
+            + "\n"
+        )
+
+
+def aria2(method, params):
+    data = json.dumps({
+        "jsonrpc": "2.0",
+        "id": "organizer",
+        "method": method,
+        "params": params
+    }).encode()
+
+    req = urllib.request.Request(
+        ARIA2_URL,
+        data=data,
+        headers={
+            "Content-Type": "application/json"
+        }
+    )
+
+    with urllib.request.urlopen(req, timeout=30) as response:
+        result = json.loads(response.read())
+
+    if "error" in result:
+        raise RuntimeError(result["error"])
+
+    return result["result"]
+
+
+def host_path(aria2_path):
+    """
+    Convert aria2 Docker paths to host paths.
+
+    Docker:
+        /downloads/...
+
+    Host:
+        /mnt/media/downloads/...
+    """
+
+    if aria2_path.startswith("/downloads/"):
+        return "/mnt/media/downloads/" + aria2_path[len("/downloads/"):]
+
+    return aria2_path
+
+
+def jellyfin_refresh():
+    if not JELLYFIN_API_KEY:
+        log("WARNING: JELLYFIN_API_KEY is not set")
+        return
+
+    url = JELLYFIN_URL.rstrip("/") + "/Library/Refresh"
+
+    req = urllib.request.Request(
+        url,
+        method="POST",
+        headers={
+            "X-Emby-Token": JELLYFIN_API_KEY
+        }
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            log(
+                f"Jellyfin library refresh triggered: "
+                f"HTTP {response.status}"
+            )
+    except Exception as e:
+        log(f"Jellyfin refresh ERROR: {e}")
+
+
+def process_gid(gid):
+    log(f"Processing GID {gid}")
+
+    info = aria2(
+        "aria2.tellStatus",
+        [
+            "token:" + ARIA2_SECRET,
+            gid
+        ]
+    )
+
+    status = info.get("status")
+
+    if status != "complete":
+        log(
+            f"GID {gid} is not complete yet: {status}. "
+            f"Will retry."
+        )
+        return False
+
+    files = info.get("files", [])
+
+    if not files:
+        raise RuntimeError("No files returned by aria2")
+
+    moved_any = False
+
+    for file_info in files:
+
+        aria2_source = file_info.get("path", "")
+        source = host_path(aria2_source)
+
+        log(
+            f"GID {gid}: "
+            f"aria2 path={aria2_source} "
+            f"host path={source}"
+        )
+
+        if not os.path.exists(source):
+            log(
+                f"GID {gid}: source does not exist: {source}"
+            )
+            continue
+
+        filename = os.path.basename(source)
+        lower = filename.lower()
+
+        if not lower.endswith(VIDEO_EXTENSIONS):
+            log(
+                f"GID {gid}: skipping non-video file: "
+                f"{filename}"
+            )
+            continue
+
+        # Detect TV episode
+        episode_match = re.search(
+            r"(?i)s(\d{1,2})e(\d{1,2})",
+            filename
+        )
+
+        if episode_match:
+            season_number = int(episode_match.group(1))
+
+            # Extract show name from torrent directory
+            torrent_dir = os.path.dirname(source)
+            torrent_name = os.path.basename(torrent_dir)
+
+            # Remove common release information
+            show_name = re.split(
+                r"(?i)[._ -]+S\d{1,2}E\d{1,2}",
+                torrent_name
+            )[0]
+
+            show_name = show_name.replace(".", " ").strip()
+
+            if not show_name:
+                show_name = torrent_name
+
+            destination_dir = os.path.join(
+                TV,
+                show_name,
+                f"Season {season_number:02d}"
+            )
+
+            media_type = "TV"
+
+        else:
+            # Movie
+            torrent_dir = os.path.dirname(source)
+            torrent_name = os.path.basename(torrent_dir)
+
+            movie_name = re.split(
+                r"(?i)[._ -]+(?:19|20)\d{2}",
+                torrent_name
+            )[0]
+
+            movie_name = movie_name.replace(".", " ").strip()
+
+            if not movie_name:
+                movie_name = torrent_name
+
+            destination_dir = os.path.join(
+                MOVIES,
+                movie_name
+            )
+
+            media_type = "Movie"
+
+        os.makedirs(
+            destination_dir,
+            exist_ok=True
+        )
+
+        destination = os.path.join(
+            destination_dir,
+            filename
+        )
+
+        if os.path.exists(destination):
+            log(
+                f"GID {gid}: destination already exists: "
+                f"{destination}"
+            )
+            continue
+
+        log(
+            f"GID {gid}: moving {media_type}: "
+            f"{source} -> {destination}"
+        )
+
+        shutil.move(
+            source,
+            destination
+        )
+
+        log(
+            f"GID {gid}: moved successfully: "
+            f"{destination}"
+        )
+
+        moved_any = True
+
+        # Remove aria2 control file belonging to this media file
+        aria2_control = source + ".aria2"
+
+        if os.path.exists(aria2_control):
+            try:
+                os.remove(aria2_control)
+            except Exception as e:
+                log(
+                    f"GID {gid}: could not remove "
+                    f"{aria2_control}: {e}"
+                )
+
+    if moved_any:
+        jellyfin_refresh()
+
+    return True
+
+
+def main():
+    log("Jellyfin organizer started")
+
+    while True:
+
+        if os.path.exists(QUEUE):
+
+            with open(QUEUE, "r") as f:
+                gids = [
+                    x.strip()
+                    for x in f
+                    if x.strip()
+                ]
+
+            remaining = []
+
+            for gid in gids:
+
+                try:
+                    success = process_gid(gid)
+
+                    if not success:
+                        remaining.append(gid)
+
+                except Exception as e:
+                    log(
+                        f"GID {gid} ERROR: {e}"
+                    )
+                    remaining.append(gid)
+
+            # Rewrite queue with only items that need retry
+            with open(QUEUE, "w") as f:
+                for gid in remaining:
+                    f.write(gid + "\n")
+
+        time.sleep(10)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,146 @@
+{"Protocol":0,"Id":"cdfa185ce053ed271b1e7aa65017b62e","Path":"/media/tv/Reacher/Season 04/Reacher.S04E01.1080p.x265-ELiTE.mkv","EncoderPath":null,"EncoderProtocol":null,"Type":0,"Container":"mkv","Size":727606360,"Name":"Reacher.S04E01.1080p.x265-ELiTE","IsRemote":false,"ETag":"e342f45ec5d750f93f09d9bfa053b161","RunTimeTicks":27805120000,"ReadAtNativeFramerate":false,"IgnoreDts":false,"IgnoreIndex":false,"GenPtsInput":false,"SupportsTranscoding":true,"SupportsDirectStream":true,"SupportsDirectPlay":true,"IsInfiniteStream":false,"UseMostCompatibleTranscodingProfile":false,"RequiresOpening":false,"OpenToken":null,"RequiresClosing":false,"LiveStreamId":null,"BufferMs":null,"RequiresLooping":false,"SupportsProbing":true,"VideoType":0,"IsoType":null,"Video3DFormat":null,"MediaStreams":[{"Codec":"hevc","CodecTag":null,"Language":null,"ColorRange":null,"ColorSpace":"bt709","ColorTransfer":"bt709","ColorPrimaries":"bt709","DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"Hdr10PlusPresentFlag":null,"VideoRange":1,"VideoRangeType":1,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":null,"LocalizedDefault":null,"LocalizedForced":null,"LocalizedExternal":null,"LocalizedHearingImpaired":null,"DisplayTitle":"1080p HEVC SDR","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":2093445,"BitDepth":10,"RefFrames":1,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"IsHearingImpaired":false,"Height":960,"Width":1920,"AverageFrameRate":23.976025,"RealFrameRate":23.976025,"ReferenceFrameRate":23.976025,"Profile":"Main 10","Type":1,"AspectRatio":"2:1","Index":0,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":"yuv420p10le","Level":120,"IsAnamorphic":false},{"Codec":"ac3","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"Hdr10PlusPresentFlag":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":null,"LocalizedDefault":"Default","LocalizedForced":null,"LocalizedExternal":"External","LocalizedHearingImpaired":null,"DisplayTitle":"English - Dolby Digital - 5.1 - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":"5.1","BitRate":448000,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":6,"SampleRate":48000,"IsDefault":true,"IsForced":false,"IsHearingImpaired":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":0,"AspectRatio":null,"Index":1,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"subrip","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"Hdr10PlusPresentFlag":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"English - SUBRIP","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":0,"Width":0,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":2,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":true,"SupportsExternalStream":true,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"subrip","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"Hdr10PlusPresentFlag":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"English - Forced - SUBRIP","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":true,"IsHearingImpaired":false,"Height":0,"Width":0,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":3,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":true,"SupportsExternalStream":true,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null}],"MediaAttachments":[],"Formats":[],"Bitrate":2541445,"FallbackMaxStreamingBitrate":null,"Timestamp":null,"RequiredHttpHeaders":{},"TranscodingUrl":null,"TranscodingSubProtocol":0,"TranscodingContainer":null,"AnalyzeDurationMs":null,"DefaultAudioStreamIndex":null,"DefaultSubtitleStreamIndex":null,"HasSegments":false}
+
+/usr/lib/jellyfin-ffmpeg/ffmpeg -analyzeduration 200M -probesize 1G -fflags +genpts  -i file:"/media/tv/Reacher/Season 04/Reacher.S04E01.1080p.x265-ELiTE.mkv" -map_metadata -1 -map_chapters -1 -threads 0 -map 0:0 -map 0:1 -map -0:s -codec:v:0 copy -tag:v:0 hvc1 -bsf:v hevc_mp4toannexb -start_at_zero -codec:a:0 libfdk_aac -ac 2 -ab 256000 -af "volume=2" -copyts -avoid_negative_ts disabled -max_muxing_queue_size 2048 -f hls -max_delay 5000000 -hls_time 6 -hls_segment_type fmp4 -hls_fmp4_init_filename "c6d80b2ab66106eabc8f85c36cdd6f0d-1.mp4" -start_number 0 -hls_segment_filename "/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d%d.mp4" -hls_playlist_type vod -hls_list_size 0 -hls_segment_options movflags=+frag_discont -y "/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d.m3u8"
+
+
+ffmpeg version 7.1.4-Jellyfin Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 14 (Debian 14.2.0-19)
+  configuration: --prefix=/usr/lib/jellyfin-ffmpeg --target-os=linux --extra-version=Jellyfin --disable-doc --disable-ffplay --disable-static --disable-libxcb --disable-sdl2 --disable-xlib --enable-lto=auto --enable-gpl --enable-version3 --enable-shared --enable-gmp --enable-gnutls --enable-chromaprint --enable-opencl --enable-libdrm --enable-libxml2 --enable-libass --enable-libfreetype --enable-libfribidi --enable-libfontconfig --enable-libharfbuzz --enable-libbluray --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libopenmpt --enable-libdav1d --enable-libsvtav1 --enable-libwebp --enable-libvpx --enable-libx264 --enable-libx265 --enable-libzvbi --enable-libzimg --enable-libfdk-aac --arch=arm64 --cross-prefix=/usr/bin/aarch64-linux-gnu- --enable-cross-compile --enable-rkmpp --enable-rkrga --enable-ffnvcodec --enable-cuda --enable-cuda-llvm --enable-cuvid --enable-nvdec --enable-nvenc
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.103 / 61.  7.103
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  5.100 / 10.  5.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, matroska,webm, from 'file:/media/tv/Reacher/Season 04/Reacher.S04E01.1080p.x265-ELiTE.mkv':
+  Metadata:
+    title           : Reacher.S04E01
+    COMMENT         : ELiTE-Wed-12-Aug-2026,08:42:25,1080p,21,fast,Y,8253091,1920,960,2
+    ENCODER         : Lavf62.3.100
+  Duration: 00:46:20.51, start: -0.005000, bitrate: 2093 kb/s
+  Stream #0:0: Video: hevc (Main 10), yuv420p10le(tv, bt709, progressive), 1920x960 [SAR 1:1 DAR 2:1], 23.98 fps, 23.98 tbr, 1k tbn (default)
+      Metadata:
+        ENCODER         : Lavc62.11.100 libx265
+        DURATION        : 00:46:20.486000000
+  Stream #0:1(eng): Audio: ac3, 48000 Hz, 5.1(side), fltp, 448 kb/s (default)
+      Metadata:
+        ENCODER         : Lavc62.11.100 ac3
+        DURATION        : 00:46:20.512000000
+  Stream #0:2(eng): Subtitle: subrip (srt)
+      Metadata:
+        DURATION        : 00:43:53.048000000
+  Stream #0:3(eng): Subtitle: subrip (srt) (forced)
+      Metadata:
+        DURATION        : 00:26:39.765000000
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (ac3 (native) -> aac (libfdk_aac))
+Press [q] to stop, [?] for help
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d-1.mp4' for writing
+Output #0, hls, to '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d.m3u8':
+  Metadata:
+    encoder         : Lavf61.7.103
+  Stream #0:0: Video: hevc (Main 10) (hvc1 / 0x31637668), yuv420p10le(tv, bt709, progressive), 1920x960 [SAR 1:1 DAR 2:1], q=2-31, 23.98 fps, 23.98 tbr, 16k tbn (default)
+  Stream #0:1: Audio: aac, 48000 Hz, stereo, s16, 256 kb/s (default)
+      Metadata:
+        encoder         : Lavc61.19.101 libfdk_aac
+      Side data:
+        cpb: bitrate max/min/avg: 256000/256000/256000 buffer size: 0 vbv_delay: N/A
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d0.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d1.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d2.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d3.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d4.mp4' for writing
+frame=  864 fps=0.0 q=-1.0 size=N/A time=00:00:00.00 bitrate=N/A speed=   0x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d5.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d6.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d7.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d8.mp4' for writing
+frame= 1772 fps=1771 q=-1.0 size=N/A time=00:00:37.93 bitrate=N/A speed=37.9x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d9.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d10.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d11.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d12.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d13.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d14.mp4' for writing
+frame= 2701 fps=1800 q=-1.0 size=N/A time=00:01:16.60 bitrate=N/A speed=51.1x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d15.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d16.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d17.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d18.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d19.mp4' for writing
+frame= 3641 fps=1820 q=-1.0 size=N/A time=00:01:55.79 bitrate=N/A speed=57.9x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d20.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d21.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d22.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d23.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d24.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d25.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d26.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d27.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d28.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d29.mp4' for writing
+frame= 4567 fps=1826 q=-1.0 size=N/A time=00:02:34.47 bitrate=N/A speed=61.8x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d30.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d31.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d32.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d33.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d34.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d35.mp4' for writing
+frame= 5273 fps=1757 q=-1.0 size=N/A time=00:03:03.91 bitrate=N/A speed=61.3x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d36.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d37.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d38.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d39.mp4' for writing
+frame= 5958 fps=1702 q=-1.0 size=N/A time=00:03:32.48 bitrate=N/A speed=60.7x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d40.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d41.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d42.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d43.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d44.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d45.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d46.mp4' for writing
+frame= 6827 fps=1706 q=-1.0 size=N/A time=00:04:08.70 bitrate=N/A speed=62.2x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d47.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d48.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d49.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d50.mp4' for writing
+frame= 7494 fps=1665 q=-1.0 size=N/A time=00:04:36.58 bitrate=N/A speed=61.4x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d51.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d52.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d53.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d54.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d55.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d56.mp4' for writing
+frame= 8406 fps=1681 q=-1.0 size=N/A time=00:05:14.56 bitrate=N/A speed=62.9x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d57.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d58.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d59.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d60.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d61.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d62.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d63.mp4' for writing
+frame= 9353 fps=1700 q=-1.0 size=N/A time=00:05:54.04 bitrate=N/A speed=64.4x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d64.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d65.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d66.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d67.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d68.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d69.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d70.mp4' for writing
+frame=10398 fps=1732 q=-1.0 size=N/A time=00:06:37.63 bitrate=N/A speed=66.2x    
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d71.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d72.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d73.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d74.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d75.mp4' for writing
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d76.mp4' for writing
+
+
+[q] command received. Exiting.
+
+[hls @ 0xe39cc9ec0f00] Opening '/cache/transcodes/c6d80b2ab66106eabc8f85c36cdd6f0d77.mp4' for writing
+[out#0/hls @ 0xe39cca39d7c0] video:87810KiB audio:14601KiB subtitle:0KiB other streams:0KiB global headers:2KiB muxing overhead: unknown
+frame=11202 fps=1721 q=-1.0 Lsize=N/A time=00:07:11.63 bitrate=N/A speed=66.3x    

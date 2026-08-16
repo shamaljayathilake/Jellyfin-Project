@@ -1,0 +1,34 @@
+services:
+  jellyfin-downloader-ui:
+    build: .
+    container_name: jellyfin-downloader-ui
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:8080:8080"
+
+    environment:
+      ARIA2_URL: http://aria2:6800/jsonrpc
+      ARIA2_SECRET: ${ARIA2_SECRET}
+      JELLYFIN_URL: http://jellyfin:8096
+      JELLYFIN_API_KEY: ${JELLYFIN_API_KEY}
+      FLASK_SECRET_KEY: ${FLASK_SECRET_KEY}
+
+      DOWNLOADER_USERNAME: ${DOWNLOADER_USERNAME}
+      DOWNLOADER_PASSWORD: ${DOWNLOADER_PASSWORD}
+
+    volumes:
+      - /mnt/media/downloads:/downloads
+      - /mnt/media/movies:/media/movies
+      - /mnt/media/tv:/media/tv
+
+    networks:
+      - media-net
+
+    group_add:
+      - "1002"
+
+
+networks:
+  media-net:
+    external: true
