@@ -581,6 +581,13 @@ def remove_download(gid):
                 aria2_params(gid)
             )
 
+        # Flush aria2's session so the deleted torrent does not come back
+        # after the container restarts.
+        try:
+            aria2("aria2.saveSession", aria2_params())
+        except Exception:
+            pass
+
         removed = delete_download_files(info.get("files", []))
 
         return jsonify({
