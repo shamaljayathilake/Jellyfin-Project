@@ -1,0 +1,331 @@
+[2026-08-16 00:12:17.096 +00:00] [INF] [32] Emby.Server.Implementations.ScheduledTasks.Tasks.OptimizeDatabaseTask: Optimizing and vacuuming jellyfin.db...
+[2026-08-16 00:12:17.142 +00:00] [INF] [32] Jellyfin.Database.Providers.Sqlite.SqliteDatabaseProvider: jellyfin.db optimized successfully!
+[2026-08-16 00:12:17.143 +00:00] [INF] [32] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Optimize database" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 01:38:09.829 +00:00] [INF] [70] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 01:38:28.374 +00:00] [WRN] [58] Emby.Server.Implementations.HttpServer.WebSocketConnection: WS "172.17.0.1" error receiving data: "The remote party closed the WebSocket connection without completing the close handshake."
+[2026-08-16 01:38:28.376 +00:00] [INF] [58] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 02:00:00.046 +00:00] [INF] [6] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Extract Chapter Images" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 02:00:00.999 +00:00] [INF] [64] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for "Extract Chapter Images" set to fire at 2026-08-17 02:00:00.000 +00:00, which is 23:59:59.0002550 from now.
+[2026-08-16 03:00:00.110 +00:00] [INF] [38] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Generate Trickplay Images" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 03:00:01.000 +00:00] [INF] [62] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for "Generate Trickplay Images" set to fire at 2026-08-17 03:00:00.000 +00:00, which is 23:59:58.9995646 from now.
+[2026-08-16 05:17:55.619 +00:00] [INF] [35] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 05:18:46.085 +00:00] [WRN] [84] Emby.Server.Implementations.HttpServer.WebSocketConnection: WS "172.17.0.1" error receiving data: "The remote party closed the WebSocket connection without completing the close handshake."
+[2026-08-16 05:18:46.086 +00:00] [INF] [84] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 05:45:38.208 +00:00] [INF] [41] Emby.Server.Implementations.IO.LibraryMonitor: "tv" ("/media/tv") will be refreshed.
+[2026-08-16 05:48:47.841 +00:00] [INF] [78] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 05:49:00.016 +00:00] [INF] [41] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:49:00.016 +00:00] [INF] [41] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:49:00.017 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:49:00.021 +00:00] [WRN] [41] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:49:00.029 +00:00] [WRN] [41] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:49:00.077 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E09 - Flame Red [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 0371a8b3-f9f9-d767-dfd7-e332f22fdbfd
+[2026-08-16 05:49:00.134 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E11 - Red Johns Friends [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 06bb76db-f624-1e67-8ea0-22294a4a9428
+[2026-08-16 05:49:00.151 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E01 - Pilot [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 0a8d7cf7-2117-25cf-88a7-669efd95c790
+[2026-08-16 05:49:00.180 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E10 - Red Brick and Ivy [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 28620975-10b7-446a-9553-3e749362e3fa
+[2026-08-16 05:49:00.205 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E13 - Paint It Red [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 3715aced-7c7c-1c76-1776-f259d5b2955a
+[2026-08-16 05:49:00.220 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E07 - Seeing Red [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 37c0aca9-5c5f-2ef7-74ad-e23d41943d79
+[2026-08-16 05:49:00.236 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E17 - Carnelian Inc [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 47f0954e-75ee-43f2-5e84-3b650bd48dab
+[2026-08-16 05:49:00.250 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E16 - Bloodshot [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 6aac7595-adbf-1229-2c26-c44ad58e8d71
+[2026-08-16 05:49:00.265 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E22 - Blood Brothers [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 78bd92bd-1494-9874-4c98-bd8efa9ca25d
+[2026-08-16 05:49:00.279 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E21 - Miss Red [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 81cad484-0de6-34bf-9ff7-048057a74fab
+[2026-08-16 05:49:00.296 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E20 - Red Sauce [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 87df8557-735e-dc68-1da6-1bffd550947b
+[2026-08-16 05:49:00.312 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E06 - Red Handed [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 89181bbf-0875-206f-425b-1b5e10431cbe
+[2026-08-16 05:49:00.361 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E18 - Russet Potatoes [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 92baabb9-0f5a-ea44-0c49-a7b0147c79bd
+[2026-08-16 05:49:00.384 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E15 - Scarlett Fever [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 9e26c69d-d08c-ee43-fae7-34394f07e38d
+[2026-08-16 05:49:00.400 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E08 - The Thin Red Line [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: 9ec7daa4-8d68-8797-b3ad-2710693ec481
+[2026-08-16 05:49:00.414 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E12 - Red Rum [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: ad2c7df1-19f1-0347-567e-fa03b1dd9b52
+[2026-08-16 05:49:00.430 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E14 - Crimson Casanova [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: b64204bf-66c4-fbab-0c80-75ef722b192f
+[2026-08-16 05:49:00.444 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E03 - Red Tide [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: d0625195-7409-326a-a9b5-1e19c84e9c6e
+[2026-08-16 05:49:00.458 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E02 - Red Hair and Silver Tape [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: e3989d00-5c8d-ab8e-1d89-8ecf36011acb
+[2026-08-16 05:49:00.471 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E23 - Red Johns Footsteps [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: e493302d-5ae2-3417-865b-7d42de8f0941
+[2026-08-16 05:49:00.487 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E19 - A Dozen Red Roses [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: e8cb297a-5310-234f-148d-d56b95c92710
+[2026-08-16 05:49:00.502 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E04 - Ladies in Red [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: f3cc11fa-c610-15ca-d53f-ea3652d19591
+[2026-08-16 05:49:00.545 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Series", Name: "The Mentalist", Path: "/media/tv/The Mentalist (2008) - S01E05 - Redwood [WEBDL-1080p][Opus 5 1][AV1]-Castiel mkv", Id: feee08bb-6fdb-21b0-064f-e59700ec2c28
+[2026-08-16 05:49:01.034 +00:00] [INF] [41] MediaBrowser.Providers.TV.SeriesMetadataService: Creating Season "Season Unknown" entry for "The Mentalist"
+[2026-08-16 05:49:04.728 +00:00] [INF] [41] MediaBrowser.Providers.TV.SeriesMetadataService: Removing virtual season null in series "The Mentalist"
+[2026-08-16 05:49:04.728 +00:00] [INF] [41] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Season", Name: "Season Unknown", Path: "", Id: 3886577c-b92c-c7d4-4781-dc46d6f28488
+[2026-08-16 05:49:04.806 +00:00] [INF] [41] MediaBrowser.Providers.TV.SeriesMetadataService: Creating Season "Season 1" entry for "The Mentalist"
+[2026-08-16 05:49:04.972 +00:00] [INF] [76] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 4 seconds
+[2026-08-16 05:49:04.972 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:49:05.019 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:49:09.809 +00:00] [INF] [76] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:49:09.809 +00:00] [INF] [76] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:49:09.810 +00:00] [INF] [76] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:49:09.815 +00:00] [WRN] [76] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:49:09.824 +00:00] [WRN] [76] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:49:11.552 +00:00] [INF] [11] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 1 seconds
+[2026-08-16 05:49:11.597 +00:00] [INF] [11] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:49:11.598 +00:00] [INF] [79] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:49:59.486 +00:00] [WRN] [41] Emby.Server.Implementations.HttpServer.WebSocketConnection: WS "172.17.0.1" error receiving data: "The remote party closed the WebSocket connection without completing the close handshake."
+[2026-08-16 05:49:59.487 +00:00] [INF] [41] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 05:50:54.835 +00:00] [INF] [82] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 05:51:00.281 +00:00] [INF] [57] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:51:00.281 +00:00] [INF] [57] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:51:00.283 +00:00] [INF] [57] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:51:00.286 +00:00] [WRN] [57] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:51:00.286 +00:00] [WRN] [57] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:51:00.294 +00:00] [WRN] [57] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:51:00.294 +00:00] [WRN] [57] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:51:00.625 +00:00] [INF] [57] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:51:00.671 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:51:00.673 +00:00] [INF] [57] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:51:03.473 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:51:03.473 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:51:03.475 +00:00] [INF] [80] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:51:03.478 +00:00] [WRN] [80] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:51:03.479 +00:00] [WRN] [80] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:51:03.491 +00:00] [WRN] [80] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:51:03.491 +00:00] [WRN] [80] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:51:03.822 +00:00] [INF] [80] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:51:03.867 +00:00] [INF] [34] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:51:03.868 +00:00] [INF] [35] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:51:33.018 +00:00] [INF] [34] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 05:52:09.298 +00:00] [INF] [35] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:52:09.298 +00:00] [INF] [35] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:52:09.298 +00:00] [INF] [35] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:52:09.304 +00:00] [WRN] [35] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:52:09.304 +00:00] [WRN] [35] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:52:09.312 +00:00] [WRN] [35] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:52:09.312 +00:00] [WRN] [35] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:52:09.657 +00:00] [INF] [35] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:52:09.703 +00:00] [INF] [79] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:52:09.703 +00:00] [INF] [35] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:52:13.306 +00:00] [INF] [79] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:52:13.306 +00:00] [INF] [79] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:52:13.306 +00:00] [INF] [79] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:52:13.310 +00:00] [WRN] [79] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:52:13.311 +00:00] [WRN] [79] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:52:13.327 +00:00] [WRN] [79] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:52:13.328 +00:00] [WRN] [79] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:52:13.660 +00:00] [INF] [79] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:52:13.705 +00:00] [INF] [78] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:52:13.707 +00:00] [INF] [79] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:52:37.573 +00:00] [INF] [78] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 05:52:43.491 +00:00] [WRN] [34] Emby.Server.Implementations.HttpServer.WebSocketConnection: WS "172.17.0.1" error receiving data: "The remote party closed the WebSocket connection without completing the close handshake."
+[2026-08-16 05:52:43.492 +00:00] [INF] [34] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 05:55:18.044 +00:00] [INF] [84] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 05:56:01.205 +00:00] [INF] [62] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:56:01.205 +00:00] [INF] [62] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:56:01.206 +00:00] [INF] [62] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:56:01.210 +00:00] [WRN] [62] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:56:01.211 +00:00] [WRN] [62] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:56:01.219 +00:00] [WRN] [62] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:56:01.219 +00:00] [WRN] [62] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:56:01.552 +00:00] [INF] [62] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:56:01.600 +00:00] [INF] [68] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:56:01.602 +00:00] [INF] [62] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:56:08.401 +00:00] [INF] [68] Emby.Server.Implementations.Session.SessionManager: Sending shutdown notifications
+[2026-08-16 05:56:08.950 +00:00] [INF] [68] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 05:56:08.958 +00:00] [INF] [62] Main: Running query planner optimizations in the database... This might take a while
+[2026-08-16 05:56:08.994 +00:00] [INF] [70] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:56:08.995 +00:00] [INF] [70] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:56:09.002 +00:00] [INF] [62] Emby.Server.Implementations.ApplicationHost: Disposing "CoreAppHost"
+[2026-08-16 05:56:09.003 +00:00] [INF] [62] Emby.Server.Implementations.ApplicationHost: Disposing "MusicBrainzArtistProvider"
+[2026-08-16 05:56:09.004 +00:00] [INF] [62] Emby.Server.Implementations.ApplicationHost: Disposing "MusicBrainzAlbumProvider"
+[2026-08-16 05:56:09.004 +00:00] [INF] [62] Emby.Server.Implementations.ApplicationHost: Disposing "PluginManager"
+[2026-08-16 05:56:09.017 +00:00] [INF] [70] Jellyfin.Server.ServerSetupApp.SetupServer: Kestrel is listening on "0.0.0.0"
+[2026-08-16 05:56:09.034 +00:00] [INF] [70] Emby.Server.Implementations.AppBase.BaseConfigurationManager: Setting cache path: "/cache"
+[2026-08-16 05:56:09.043 +00:00] [INF] [70] Emby.Server.Implementations.ApplicationHost: Loading assemblies
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Defined LAN subnets: ["127.0.0.1/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Defined LAN exclusions: []
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Used LAN subnets: ["127.0.0.1/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Filtered interface addresses: ["127.0.0.1", "172.17.0.2", "172.18.0.3"]
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Bind Addresses ["0.0.0.0"]
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Remote IP filter is "Allowlist"
+[2026-08-16 05:56:09.065 +00:00] [INF] [70] Jellyfin.Networking.Manager.NetworkManager: Filtered subnets: []
+[2026-08-16 05:56:09.091 +00:00] [INF] [70] Jellyfin.Database.Providers.Sqlite.SqliteDatabaseProvider: SQLite connection string: "Data Source=/config/data/jellyfin.db;Cache=Default;Default Timeout=30;Pooling=True"
+[2026-08-16 05:56:09.091 +00:00] [INF] [70] Jellyfin.Database.Providers.Sqlite.SqliteDatabaseProvider: SQLITE connection pragma command set to: 
+"PRAGMA locking_mode=NORMAL;
+PRAGMA journal_size_limit=134217728;
+PRAGMA synchronous=1;
+PRAGMA temp_store=2;
+"
+[2026-08-16 05:56:09.091 +00:00] [INF] [70] Jellyfin.Database.Implementations.Locking.NoLockBehavior: The database locking mode has been set to: NoLock.
+[2026-08-16 05:56:09.094 +00:00] [INF] [70] Main: Prepare system for possible migrations
+[2026-08-16 05:56:09.105 +00:00] [INF] [70] Jellyfin.Server.Migrations.JellyfinMigrationService: There are 0 migrations for stage CoreInitialisation.
+[2026-08-16 05:56:09.129 +00:00] [INF] [70] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: "TMDb" "10.11.11.0"
+[2026-08-16 05:56:09.129 +00:00] [INF] [70] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: "Studio Images" "10.11.11.0"
+[2026-08-16 05:56:09.130 +00:00] [INF] [70] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: "OMDb" "10.11.11.0"
+[2026-08-16 05:56:09.133 +00:00] [INF] [70] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: "MusicBrainz" "10.11.11.0"
+[2026-08-16 05:56:09.134 +00:00] [INF] [70] Emby.Server.Implementations.Plugins.PluginManager: Loaded plugin: "AudioDB" "10.11.11.0"
+[2026-08-16 05:56:09.188 +00:00] [INF] [70] Jellyfin.Server.Migrations.JellyfinMigrationService: There are 0 migrations for stage AppInitialisation.
+[2026-08-16 05:56:09.204 +00:00] [INF] [70] Main: Kestrel is listening on "0.0.0.0"
+[2026-08-16 05:56:09.495 +00:00] [WRN] [70] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware: The WebRootPath was not found: "/wwwroot". Static files may be unavailable.
+[2026-08-16 05:56:09.510 +00:00] [INF] [70] Emby.Server.Implementations.ApplicationHost: Running startup tasks
+[2026-08-16 05:56:09.512 +00:00] [INF] [84] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:56:09.512 +00:00] [INF] [62] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:56:09.520 +00:00] [INF] [70] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for "Generate Trickplay Images" set to fire at 2026-08-17 03:00:00.000 +00:00, which is 21:03:50.4799763 from now.
+[2026-08-16 05:56:09.522 +00:00] [INF] [70] Emby.Server.Implementations.ScheduledTasks.TaskManager: Daily trigger for "Extract Chapter Images" set to fire at 2026-08-17 02:00:00.000 +00:00, which is 20:03:50.4770788 from now.
+[2026-08-16 05:56:09.547 +00:00] [INF] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Found ffmpeg version "7.1.4"
+[2026-08-16 05:56:09.567 +00:00] [INF] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available "decoders": ["libdav1d", "av1", "av1_cuvid", "av1_rkmpp", "h264", "h264_rkmpp", "h264_cuvid", "hevc", "hevc_rkmpp", "hevc_cuvid", "mpeg1_rkmpp", "mpeg2video", "mpeg2_rkmpp", "mpeg2_cuvid", "mpeg4", "mpeg4_rkmpp", "mpeg4_cuvid", "msmpeg4", "vc1_cuvid", "vp8", "vp8_rkmpp", "libvpx", "vp8_cuvid", "vp9", "vp9_rkmpp", "libvpx-vp9", "vp9_cuvid", "aac", "ac3", "ac4", "dca", "flac", "mp3", "truehd"]
+[2026-08-16 05:56:09.585 +00:00] [INF] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available "encoders": ["libsvtav1", "av1_nvenc", "libx264", "h264_nvenc", "h264_v4l2m2m", "h264_rkmpp", "libx265", "hevc_nvenc", "hevc_rkmpp", "mjpeg_rkmpp", "aac", "libfdk_aac", "ac3", "alac", "dca", "flac", "libmp3lame", "libopus", "truehd", "libvorbis", "srt"]
+[2026-08-16 05:56:09.601 +00:00] [INF] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available filters: ["bwdif_cuda", "bwdif_opencl", "hwupload_cuda", "overlay_opencl", "overlay_cuda", "overlay_rkrga", "scale_cuda", "scale_opencl", "scale_rkrga", "tonemapx", "tonemap_cuda", "tonemap_opencl", "transpose_cuda", "transpose_opencl", "vpp_rkrga", "yadif_cuda", "yadif_opencl", "zscale", "alphasrc"]
+[2026-08-16 05:56:09.678 +00:00] [WRN] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Filter: "overlay_vaapi" with option "Action to take when encountering EOF from secondary input" is not available
+[2026-08-16 05:56:09.693 +00:00] [WRN] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Filter: "overlay_vulkan" with option "Action to take when encountering EOF from secondary input" is not available
+[2026-08-16 05:56:09.823 +00:00] [INF] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: Available hwaccel types: ["cuda", "drm", "opencl", "rkmpp"]
+[2026-08-16 05:56:12.525 +00:00] [INF] [84] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Clean up collections and playlists" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:56:12.622 +00:00] [INF] [68] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Clean Transcode Directory" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:56:13.076 +00:00] [INF] [32] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Update Plugins" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:56:14.313 +00:00] [INF] [70] MediaBrowser.MediaEncoding.Encoder.MediaEncoder: FFmpeg: "/usr/lib/jellyfin-ffmpeg/ffmpeg"
+[2026-08-16 05:56:14.314 +00:00] [INF] [70] Emby.Server.Implementations.ApplicationHost: ServerId: "16648ad2fd2544f0bf4e573c8c2f7441"
+[2026-08-16 05:56:14.314 +00:00] [INF] [70] Emby.Server.Implementations.ApplicationHost: Core startup complete
+[2026-08-16 05:56:14.314 +00:00] [INF] [70] Main: Startup complete 0:00:05.3095968
+[2026-08-16 05:58:04.346 +00:00] [INF] [38] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 05:58:05.285 +00:00] [INF] [78] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 05:58:05.286 +00:00] [INF] [78] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 05:58:05.286 +00:00] [INF] [78] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 05:58:05.398 +00:00] [WRN] [78] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:58:05.398 +00:00] [WRN] [78] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:58:05.406 +00:00] [WRN] [78] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/movies" is inaccessible or empty, skipping
+[2026-08-16 05:58:05.407 +00:00] [WRN] [78] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 05:58:05.926 +00:00] [INF] [78] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 05:58:05.981 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 05:58:05.982 +00:00] [INF] [78] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 05:58:39.984 +00:00] [WRN] [38] Emby.Server.Implementations.HttpServer.WebSocketConnection: WS "172.17.0.1" error receiving data: "The remote party closed the WebSocket connection without completing the close handshake."
+[2026-08-16 05:58:39.985 +00:00] [INF] [38] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 08:06:30.205 +00:00] [INF] [11] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 08:10:54.213 +00:00] [INF] [18] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 08:14:42.212 +00:00] [INF] [68] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 08:18:30.213 +00:00] [INF] [19] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 08:19:04.615 +00:00] [WRN] [37] Emby.Server.Implementations.HttpServer.WebSocketConnection: WS "172.17.0.1" error receiving data: "The remote party closed the WebSocket connection without completing the close handshake."
+[2026-08-16 08:19:04.619 +00:00] [INF] [37] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 08:36:08.279 +00:00] [INF] [19] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 08:36:20.282 +00:00] [INF] [19] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Movie", Name: "Hello! My Name is Blotto: The Movie", Path: "/media/movies/Movie Name (2025).mp4", Id: 4489c569-fffc-9cc0-d373-d3ef52b0f454
+[2026-08-16 08:36:25.504 +00:00] [INF] [19] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Movie", Name: "Now You See Me", Path: "/media/movies/Now You See Me Now You/Now.You.See.Me.Now.You.Dont.2025.1080p.WEBRip.10Bit.DDP5.1.x265-NeoNoir.mkv", Id: 53f57b3e-86bc-46c6-11b9-f0f8ff90d766
+[2026-08-16 08:36:30.446 +00:00] [INF] [19] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 08:36:32.358 +00:00] [INF] [19] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 08:40:20.367 +00:00] [INF] [19] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 08:44:44.367 +00:00] [INF] [80] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 08:45:54.670 +00:00] [INF] [68] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 08:45:54.670 +00:00] [INF] [68] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 08:45:54.671 +00:00] [INF] [68] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 08:45:54.676 +00:00] [WRN] [68] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 08:45:54.686 +00:00] [WRN] [68] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 08:46:11.271 +00:00] [INF] [81] Emby.Server.Implementations.Library.Validators.GenresValidator: Deleting dead "Genre" "818912eba0fc399e496b109d438effe9" "Documentary"
+[2026-08-16 08:46:11.271 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Genre", Name: "Documentary", Path: "/config/metadata/Genre/Documentary", Id: 818912eb-a0fc-399e-496b-109d438effe9
+[2026-08-16 08:46:11.271 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Genre", Name: "Documentary", Path: "/config/metadata/Genre/Documentary", Id: 818912eb-a0fc-399e-496b-109d438effe9
+[2026-08-16 08:46:11.408 +00:00] [INF] [81] Emby.Server.Implementations.Library.Validators.GenresValidator: Deleting dead "Genre" "f67b77276f76b0e5413abcedbe777bbe" "Music"
+[2026-08-16 08:46:11.408 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Genre", Name: "Music", Path: "/config/metadata/Genre/Music", Id: f67b7727-6f76-b0e5-413a-bcedbe777bbe
+[2026-08-16 08:46:11.409 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Genre", Name: "Music", Path: "/config/metadata/Genre/Music", Id: f67b7727-6f76-b0e5-413a-bcedbe777bbe
+[2026-08-16 08:46:11.447 +00:00] [INF] [81] Emby.Server.Implementations.Library.Validators.GenresValidator: Deleting dead "Genre" "4936f5b1a6f84f0b0aa2657368a5b364" "Thriller"
+[2026-08-16 08:46:11.447 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Genre", Name: "Thriller", Path: "/config/metadata/Genre/Thriller", Id: 4936f5b1-a6f8-4f0b-0aa2-657368a5b364
+[2026-08-16 08:46:11.448 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Genre", Name: "Thriller", Path: "/config/metadata/Genre/Thriller", Id: 4936f5b1-a6f8-4f0b-0aa2-657368a5b364
+[2026-08-16 08:46:20.337 +00:00] [INF] [42] Emby.Server.Implementations.Library.Validators.StudiosValidator: Deleting dead "Studio" "cb68a211b75f949ce873f10d4bf426b4" "K/O Paper Products"
+[2026-08-16 08:46:20.338 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Studio", Name: "K/O Paper Products", Path: "/config/metadata/Studio/K O Paper Products", Id: cb68a211-b75f-949c-e873-f10d4bf426b4
+[2026-08-16 08:46:20.338 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Studio", Name: "K/O Paper Products", Path: "/config/metadata/Studio/K O Paper Products", Id: cb68a211-b75f-949c-e873-f10d4bf426b4
+[2026-08-16 08:46:20.374 +00:00] [INF] [42] Emby.Server.Implementations.Library.Validators.StudiosValidator: Deleting dead "Studio" "3080a0f5693bb42f0b29894243458814" "See Me Louisiana"
+[2026-08-16 08:46:20.375 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Studio", Name: "See Me Louisiana", Path: "/config/metadata/Studio/See Me Louisiana", Id: 3080a0f5-693b-b42f-0b29-894243458814
+[2026-08-16 08:46:20.375 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Studio", Name: "See Me Louisiana", Path: "/config/metadata/Studio/See Me Louisiana", Id: 3080a0f5-693b-b42f-0b29-894243458814
+[2026-08-16 08:46:20.408 +00:00] [INF] [42] Emby.Server.Implementations.Library.Validators.StudiosValidator: Deleting dead "Studio" "dfceaa828b667f4e7c09a3b825e34edd" "SOIXAN7E QUIN5E"
+[2026-08-16 08:46:20.408 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Studio", Name: "SOIXAN7E QUIN5E", Path: "/config/metadata/Studio/SOIXAN7E QUIN5E", Id: dfceaa82-8b66-7f4e-7c09-a3b825e34edd
+[2026-08-16 08:46:20.408 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Studio", Name: "SOIXAN7E QUIN5E", Path: "/config/metadata/Studio/SOIXAN7E QUIN5E", Id: dfceaa82-8b66-7f4e-7c09-a3b825e34edd
+[2026-08-16 08:46:20.440 +00:00] [INF] [42] Emby.Server.Implementations.Library.Validators.StudiosValidator: Deleting dead "Studio" "8c9e316033ae37da75685215858a07ec" "Summit Entertainment"
+[2026-08-16 08:46:20.440 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Studio", Name: "Summit Entertainment", Path: "/config/metadata/Studio/Summit Entertainment", Id: 8c9e3160-33ae-37da-7568-5215858a07ec
+[2026-08-16 08:46:20.440 +00:00] [INF] [42] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Studio", Name: "Summit Entertainment", Path: "/config/metadata/Studio/Summit Entertainment", Id: 8c9e3160-33ae-37da-7568-5215858a07ec
+[2026-08-16 08:46:20.482 +00:00] [INF] [42] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 25 seconds
+[2026-08-16 08:46:20.483 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 08:46:20.485 +00:00] [INF] [68] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 08:48:01.221 +00:00] [INF] [81] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 08:48:03.378 +00:00] [INF] [48] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 08:48:25.297 +00:00] [INF] [81] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 08:48:25.297 +00:00] [INF] [81] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 08:48:25.297 +00:00] [INF] [81] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 08:48:25.302 +00:00] [WRN] [81] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 08:48:25.627 +00:00] [WRN] [81] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 08:48:26.012 +00:00] [INF] [81] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 08:48:26.072 +00:00] [INF] [81] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 08:48:26.072 +00:00] [INF] [77] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 08:50:22.330 +00:00] [INF] [81] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 08:50:24.623 +00:00] [INF] [77] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 08:54:12.630 +00:00] [INF] [80] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 09:02:36.631 +00:00] [INF] [26] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 09:03:39.230 +00:00] [INF] [60] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 09:03:41.212 +00:00] [INF] [61] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 09:03:55.062 +00:00] [INF] [39] Jellyfin.Api.Helpers.MediaInfoHelper: User policy for "shamal". EnablePlaybackRemuxing: True EnableVideoPlaybackTranscoding: True EnableAudioPlaybackTranscoding: True
+[2026-08-16 09:04:04.756 +00:00] [INF] [46] Emby.Server.Implementations.Session.SessionManager: Playback stopped reported by app "Jellyfin Web" "10.11.11" playing "Pilot". Stopped at "7045" ms
+[2026-08-16 09:08:41.219 +00:00] [INF] [24] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
+[2026-08-16 09:12:18.116 +00:00] [ERR] [78] Jellyfin.Api.Middleware.ExceptionMiddleware: Error processing request: "Could not find a part of the path '/mnt/media/videos'". URL "GET" "/Environment/DirectoryContents".
+[2026-08-16 09:12:24.265 +00:00] [ERR] [70] Jellyfin.Api.Middleware.ExceptionMiddleware: Error processing request: "Could not find a part of the path '/mnt/media/videos'". URL "GET" "/Environment/DirectoryContents".
+[2026-08-16 09:12:33.640 +00:00] [ERR] [38] Jellyfin.Api.Middleware.ExceptionMiddleware: Error processing request. URL "POST" "/Library/VirtualFolders".
+System.ArgumentException: The specified path does not exist: /mnt/media/videos.
+   at Emby.Server.Implementations.Library.LibraryManager.AddVirtualFolder(String name, Nullable`1 collectionType, LibraryOptions options, Boolean refreshLibrary)
+   at Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(String name, Nullable`1 collectionType, String[] paths, AddVirtualFolderDto libraryOptionsDto, Boolean refreshLibrary)
+   at lambda_method21757(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Jellyfin.Api.Middleware.ServerStartupMessageMiddleware.Invoke(HttpContext httpContext, IServerApplicationHost serverApplicationHost, ILocalizationManager localizationManager)
+   at Jellyfin.Api.Middleware.WebSocketHandlerMiddleware.Invoke(HttpContext httpContext, IWebSocketManager webSocketManager)
+   at Jellyfin.Api.Middleware.IPBasedAccessValidationMiddleware.Invoke(HttpContext httpContext, INetworkManager networkManager)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Jellyfin.Api.Middleware.QueryStringDecodingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.ReDoc.ReDocMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Jellyfin.Api.Middleware.RobotsRedirectionMiddleware.Invoke(HttpContext httpContext)
+   at Jellyfin.Api.Middleware.LegacyEmbyRouteRewriteMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Jellyfin.Api.Middleware.ResponseTimeMiddleware.Invoke(HttpContext context, IServerConfigurationManager serverConfigurationManager)
+   at Jellyfin.Api.Middleware.ExceptionMiddleware.Invoke(HttpContext context)
+[2026-08-16 09:12:46.372 +00:00] [ERR] [70] Jellyfin.Api.Middleware.ExceptionMiddleware: Error processing request: "Could not find a part of the path '/mnt/media'". URL "GET" "/Environment/DirectoryContents".
+[2026-08-16 09:13:08.272 +00:00] [INF] [50] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 09:13:08.273 +00:00] [INF] [50] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 09:13:08.305 +00:00] [WRN] [50] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/videos" is inaccessible or empty, skipping
+[2026-08-16 09:13:08.306 +00:00] [WRN] [50] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:08.395 +00:00] [INF] [38] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 09:13:08.426 +00:00] [WRN] [38] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/videos" is inaccessible or empty, skipping
+[2026-08-16 09:13:08.427 +00:00] [WRN] [38] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:08.448 +00:00] [WRN] [38] MediaBrowser.Controller.Entities.BaseItem: Library folder "/media/videos" is inaccessible or empty, skipping
+[2026-08-16 09:13:08.448 +00:00] [WRN] [38] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:08.843 +00:00] [INF] [38] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 09:13:08.911 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 09:13:08.913 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 09:13:50.400 +00:00] [INF] [18] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 09:13:50.400 +00:00] [INF] [18] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 09:13:50.400 +00:00] [INF] [18] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 09:13:50.406 +00:00] [WRN] [18] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:50.437 +00:00] [WRN] [18] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:51.229 +00:00] [INF] [38] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 09:13:51.291 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/videos"
+[2026-08-16 09:13:51.294 +00:00] [INF] [18] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 09:13:51.294 +00:00] [INF] [67] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 09:13:57.712 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 09:13:57.713 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/videos"
+[2026-08-16 09:13:57.713 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 09:13:57.713 +00:00] [INF] [80] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 09:13:57.717 +00:00] [WRN] [80] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:57.958 +00:00] [WRN] [80] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:13:58.412 +00:00] [INF] [37] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 0 seconds
+[2026-08-16 09:13:58.413 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 09:13:58.476 +00:00] [INF] [37] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/videos"
+[2026-08-16 09:13:58.477 +00:00] [INF] [80] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 09:14:11.469 +00:00] [INF] [37] Emby.Server.Implementations.Library.LibraryManager: Removing item, Type: "Folder", Name: "WhatsApp Video 2569-08-06 at 21 53 22", Path: "/media/videos/WhatsApp Video 2569-08-06 at 21 53 22", Id: f9b190fb-e1f6-716f-c02b-516665c2fffa
+[2026-08-16 09:14:11.471 +00:00] [INF] [37] Emby.Server.Implementations.Library.LibraryManager: Deleting item path, Type: "Folder", Name: "WhatsApp Video 2569-08-06 at 21 53 22", Path: "/media/videos/WhatsApp Video 2569-08-06 at 21 53 22", Id: f9b190fb-e1f6-716f-c02b-516665c2fffa
+[2026-08-16 09:14:11.471 +00:00] [ERR] [37] Jellyfin.Api.Middleware.ExceptionMiddleware: Error processing request: "Access to the path '/media/videos/WhatsApp Video 2569-08-06 at 21 53 22' is denied". URL "DELETE" "/Items/f9b190fbe1f6716fc02b516665c2fffa".
+[2026-08-16 09:14:56.461 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/movies"
+[2026-08-16 09:14:56.461 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/videos"
+[2026-08-16 09:14:56.461 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Stopping directory watching for path "/media/tv"
+[2026-08-16 09:14:56.461 +00:00] [INF] [38] Emby.Server.Implementations.Library.LibraryManager: Validating media library
+[2026-08-16 09:14:56.465 +00:00] [WRN] [38] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:14:56.474 +00:00] [WRN] [38] MediaBrowser.Controller.Entities.BaseItem: Library folder "/config/data/playlists" is inaccessible or empty, skipping
+[2026-08-16 09:14:56.502 +00:00] [WRN] [38] Emby.Server.Implementations.Library.LibraryManager: Image not found at "/config/metadata/library/f9/f9b190fbe1f6716fc02b516665c2fffa/poster.jpg"
+[2026-08-16 09:14:56.504 +00:00] [WRN] [38] Emby.Server.Implementations.Library.LibraryManager: Image not found at "/config/metadata/library/45/4522d2487269e2537dd81cbaa804ea2a/poster.jpg"
+[2026-08-16 09:15:14.098 +00:00] [INF] [46] Emby.Server.Implementations.ScheduledTasks.TaskManager: "Scan Media Library" Completed after 0 minute(s) and 17 seconds
+[2026-08-16 09:15:14.099 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/movies"
+[2026-08-16 09:15:14.163 +00:00] [INF] [46] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/videos"
+[2026-08-16 09:15:14.166 +00:00] [INF] [38] Emby.Server.Implementations.IO.LibraryMonitor: Watching directory "/media/tv"
+[2026-08-16 09:19:43.833 +00:00] [INF] [3] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" closed
+[2026-08-16 09:19:45.785 +00:00] [INF] [75] Emby.Server.Implementations.HttpServer.WebSocketManager: WS "172.17.0.1" request
+[2026-08-16 09:23:33.793 +00:00] [INF] [75] Emby.Server.Implementations.Session.SessionWebSocketListener: Sending ForceKeepAlive message to 1 inactive WebSockets.
