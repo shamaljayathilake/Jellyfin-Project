@@ -8,6 +8,7 @@ import urllib.request
 import urllib.error
 
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -44,6 +45,20 @@ JELLYFIN_API_KEY = os.environ.get(
 DOWNLOADS = "/downloads"
 MOVIES = "/media/movies"
 TV = "/media/tv"
+VIDEOS = "/media/videos"
+ALLOWED_VIDEO_EXTENSIONS = {
+    ".mp4",
+    ".mkv",
+    ".avi",
+    ".mov",
+    ".m4v",
+    ".webm",
+    ".wmv",
+    ".ts",
+    ".mpg",
+    ".mpeg",
+    ".flv"
+}
 
 
 def aria2(method, params):
@@ -144,6 +159,17 @@ def extract_season_from_path(path):
     return None
 
 
+def is_allowed_video(filename):
+    return os.path.splitext(filename.lower())[1] in ALLOWED_VIDEO_EXTENSIONS
+
+
+def clean_media_title(filename):
+    title = os.path.splitext(filename)[0]
+    title = re.sub(r"\.(19|20)\d{2}.*$", "", title, flags=re.IGNORECASE)
+    title = re.sub(r"[._]+", " ", title).strip()
+    return title
+
+
 def delete_download_files(files):
     """Delete only files that aria2 placed below the downloads mount."""
     downloads_root = os.path.realpath(DOWNLOADS)
@@ -203,7 +229,11 @@ def classify(filename):
     if re.search(r"s\d{1,2}e\d{1,2}", filename, re.IGNORECASE):
         return "tv"
 
-    return "movie"
+    movie_hint = re.search(r"\b(19|20)\d{2}\b", filename)
+    if movie_hint:
+        return "movie"
+
+    return "video"
 
 
 def organize_download(gid):
@@ -223,17 +253,6 @@ def organize_download(gid):
 
         moved = []
 
-        video_extensions = (
-            ".mp4",
-            ".mkv",
-            ".avi",
-            ".mov",
-            ".m4v",
-            ".webm",
-            ".wmv",
-            ".ts"
-        )
-
         for file_info in files:
             source = file_info.get("path", "")
 
@@ -246,17 +265,17 @@ def organize_download(gid):
                 continue
 
             filename = os.path.basename(source)
-            lower = filename.lower()
-
-            if not lower.endswith(video_extensions):
+            if not is_allowed_video(filename):
                 continue
 
             media_type = classify(filename)
 
             if media_type == "tv":
                 destination_root = TV
-            else:
+            elif media_type == "movie":
                 destination_root = MOVIES
+            else:
+                destination_root = VIDEOS
 
             if media_type == "tv":
                 season = extract_season_from_path(source)
@@ -284,21 +303,13 @@ def organize_download(gid):
                         title or "Unknown Series"
                     )
 
+            elif media_type == "movie":
+                title = clean_media_title(filename)
+                destination_dir = os.path.join(destination_root, title)
+
             else:
-                title = re.sub(
-                    r"\.(19|20)\d{2}.*$",
-                    "",
-                    filename,
-                    flags=re.IGNORECASE
-                )
-
-                title = os.path.splitext(title)[0]
-                title = re.sub(r"[._]+", " ", title).strip()
-
-                destination_dir = os.path.join(
-                    destination_root,
-                    title
-                )
+                title = clean_media_title(filename)
+                destination_dir = os.path.join(destination_root, title)
 
             os.makedirs(destination_dir, exist_ok=True)
 
@@ -329,6 +340,41 @@ def organize_download(gid):
             "success": False,
             "message": str(e)
         }
+
+
+def save_uploaded_media(upload_file, media_type):
+    original_name = upload_file.filename or ""
+    filename = secure_filename(original_name)
+
+    if not filename or not is_allowed_video(filename):
+        return {
+            "success": False,
+            "message": "Please upload a supported video file."
+        }
+
+    if media_type == "movie":
+        destination_root = MOVIES
+    else:
+        destination_root = VIDEOS
+
+    if media_type == "movie":
+        title = clean_media_title(filename)
+        destination_dir = os.path.join(destination_root, title)
+    else:
+        title = clean_media_title(filename)
+        destination_dir = os.path.join(destination_root, title)
+
+    os.makedirs(destination_dir, exist_ok=True)
+
+    destination = os.path.join(destination_dir, filename)
+    upload_file.save(destination)
+
+    jellyfin_refresh()
+
+    return {
+        "success": True,
+        "path": destination
+    }
 
 
 
@@ -413,6 +459,31 @@ def add_download():
             "gid": gid
         })
 
+    except Exception as e:
+        return jsonify({
+            "error": str(e)
+        }), 500
+
+
+@app.route("/api/upload", methods=["POST"])
+def upload_media():
+    upload_file = request.files.get("file")
+    media_type = (request.form.get("mediaType") or "movie").strip().lower()
+
+    if media_type not in ("movie", "video"):
+        return jsonify({
+            "error": "Invalid media type"
+        }), 400
+
+    if not upload_file or not upload_file.filename:
+        return jsonify({
+            "error": "Please choose a file to upload"
+        }), 400
+
+    try:
+        result = save_uploaded_media(upload_file, media_type)
+        status_code = 200 if result.get("success") else 400
+        return jsonify(result), status_code
     except Exception as e:
         return jsonify({
             "error": str(e)

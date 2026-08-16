@@ -116,6 +116,31 @@
         Add Download
     </button>
 
+    <div class="card">
+        <div class="name">Manual Upload</div>
+
+        <input
+            id="uploadFile"
+            type="file"
+            accept=".mp4,.mkv,.avi,.mov,.m4v,.webm,.wmv,.ts,.mpg,.mpeg,.flv">
+
+        <br><br>
+
+        <label for="uploadType">Save as:</label>
+        <select id="uploadType">
+            <option value="movie">Movie</option>
+            <option value="video">Video Library</option>
+        </select>
+
+        <br>
+
+        <button class="add" onclick="uploadMedia()">
+            Upload to Jellyfin
+        </button>
+
+        <div id="uploadMessage"></div>
+    </div>
+
     <div id="message"></div>
 
     <h2>Downloads</h2>
@@ -211,6 +236,51 @@ async function addDownload() {
         message.innerHTML =
             '<div class="error">' +
             error.message +
+            '</div>';
+    }
+}
+
+
+async function uploadMedia() {
+    const fileInput = document.getElementById("uploadFile");
+    const uploadType = document.getElementById("uploadType").value;
+    const message = document.getElementById("uploadMessage");
+
+    if (!fileInput.files.length) {
+        message.innerHTML =
+            '<div class="error">Choose a video file first.</div>';
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", fileInput.files[0]);
+    formData.append("mediaType", uploadType);
+
+    message.innerHTML = '<div>Uploading...</div>';
+
+    try {
+        const response = await fetch("/api/upload", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (!response.ok || data.error) {
+            throw new Error(data.error || "Upload failed");
+        }
+
+        message.innerHTML =
+            '<div class="success">Uploaded to ' +
+            escapeHtml(data.path) +
+            '</div>';
+
+        fileInput.value = "";
+        loadDownloads();
+    } catch (error) {
+        message.innerHTML =
+            '<div class="error">' +
+            escapeHtml(error.message) +
             '</div>';
     }
 }

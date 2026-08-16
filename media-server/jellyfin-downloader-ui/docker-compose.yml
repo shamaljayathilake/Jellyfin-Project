@@ -21,6 +21,7 @@ services:
       - /mnt/media/downloads:/downloads
       - /mnt/media/movies:/media/movies
       - /mnt/media/tv:/media/tv
+      - /mnt/media/videos:/media/videos
 
     networks:
       - media-net
