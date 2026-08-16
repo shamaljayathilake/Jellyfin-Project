@@ -1,0 +1,68 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    networks:
+      - media-net
+    ports:
+      - "8096:8096"
+      - "8920:8920"
+    environment:
+      TZ: ${TZ}
+      JELLYFIN_PublishedServerUrl: ${JELLYFIN_PUBLISHED_SERVER_URL}
+    volumes:
+      - ./media-server/jellyfin/config/config:/config
+      - ./media-server/jellyfin/config/data:/data
+      - ./media-server/jellyfin/config/log:/log
+      - ./media-server/jellyfin/cache:/cache
+      - /mnt/media/movies:/media/movies
+      - /mnt/media/tv:/media/tv
+      - /mnt/media/videos:/media/videos
+    devices:
+      - /dev/dri:/dev/dri
+
+  aria2:
+    build:
+      context: ./media-server/aria2-image
+    container_name: aria2
+    restart: unless-stopped
+    command: ["--conf-path=/config/aria2.conf"]
+    ports:
+      - "6800:6800"
+    environment:
+      ARIA2_SECRET: ${ARIA2_SECRET}
+    volumes:
+      - /mnt/media/downloads:/downloads
+      - ./media-server/aria2:/config
+      - ./media-server/aria2/on-complete.sh:/jellyfin-downloader/aria2-complete.sh:ro
+      - /mnt/media:/mnt/media
+    networks:
+      - media-net
+
+  jellyfin-downloader-ui:
+    build:
+      context: ./media-server/jellyfin-downloader-ui
+    container_name: jellyfin-downloader-ui
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      ARIA2_URL: http://aria2:6800/jsonrpc
+      ARIA2_SECRET: ${ARIA2_SECRET}
+      JELLYFIN_URL: http://jellyfin:8096
+      JELLYFIN_API_KEY: ${JELLYFIN_API_KEY}
+      FLASK_SECRET_KEY: ${FLASK_SECRET_KEY}
+      DOWNLOADER_USERNAME: ${DOWNLOADER_USERNAME}
+      DOWNLOADER_PASSWORD: ${DOWNLOADER_PASSWORD}
+    volumes:
+      - /mnt/media/downloads:/downloads
+      - /mnt/media/movies:/media/movies
+      - /mnt/media/tv:/media/tv
+      - /mnt/media/videos:/media/videos
+    networks:
+      - media-net
+
+networks:
+  media-net:
+    driver: bridge
