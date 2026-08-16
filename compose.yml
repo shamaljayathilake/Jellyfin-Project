@@ -12,9 +12,7 @@ services:
       TZ: ${TZ}
       JELLYFIN_PublishedServerUrl: ${JELLYFIN_PUBLISHED_SERVER_URL}
     volumes:
-      - ./media-server/jellyfin/config/config:/config
-      - ./media-server/jellyfin/config/data:/data
-      - ./media-server/jellyfin/config/log:/log
+      - ./media-server/jellyfin/config:/config
       - ./media-server/jellyfin/cache:/cache
       - /mnt/media/movies:/media/movies
       - /mnt/media/tv:/media/tv
