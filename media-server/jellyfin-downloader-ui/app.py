@@ -105,6 +105,45 @@ def translate_path(path):
     return path
 
 
+def extract_title_from_path(path):
+    """
+    Use the torrent folder name when the filename does not carry a title.
+    """
+    parts = [
+        part for part in path.split("/")
+        if part and part not in (".", "..")
+    ]
+
+    if len(parts) >= 2:
+        candidate = parts[-2]
+    elif parts:
+        candidate = parts[0]
+    else:
+        candidate = ""
+
+    candidate = re.sub(r"[._]+", " ", candidate).strip()
+    candidate = re.sub(r"\b(?:season|disc|dvd|bluray|web|x264|x265)\b.*$",
+                       "",
+                       candidate,
+                       flags=re.IGNORECASE).strip()
+    return candidate
+
+
+def extract_season_from_path(path):
+    """
+    Infer a season number from either the filename or enclosing folders.
+    """
+    match = re.search(r"s(\d{1,2})e\d{1,2}", path, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+
+    match = re.search(r"season[ ._-]*(\d{1,2})", path, re.IGNORECASE)
+    if match:
+        return int(match.group(1))
+
+    return None
+
+
 def delete_download_files(files):
     """Delete only files that aria2 placed below the downloads mount."""
     downloads_root = os.path.realpath(DOWNLOADS)
@@ -220,36 +259,30 @@ def organize_download(gid):
                 destination_root = MOVIES
 
             if media_type == "tv":
+                season = extract_season_from_path(source)
+                title = None
+
                 match = re.search(
-                    r"(s\d{1,2})e\d{1,2}",
+                    r"(.*?)\.S\d{1,2}E\d{1,2}",
                     filename,
                     re.IGNORECASE
                 )
-
                 if match:
-                    season = int(
-                        re.search(
-                            r"s(\d{1,2})",
-                            match.group(1),
-                            re.IGNORECASE
-                        ).group(1)
-                    )
+                    title = re.sub(r"[._]+", " ", match.group(1)).strip()
+                else:
+                    title = extract_title_from_path(source)
 
-                    title = re.split(
-                        r"\.S\d{1,2}E\d{1,2}",
-                        filename,
-                        flags=re.IGNORECASE
-                    )[0]
-
-                    title = re.sub(r"[._]+", " ", title).strip()
-
+                if season:
                     destination_dir = os.path.join(
                         destination_root,
-                        title,
+                        title or "Unknown Series",
                         f"Season {season:02d}"
                     )
                 else:
-                    destination_dir = destination_root
+                    destination_dir = os.path.join(
+                        destination_root,
+                        title or "Unknown Series"
+                    )
 
             else:
                 title = re.sub(
